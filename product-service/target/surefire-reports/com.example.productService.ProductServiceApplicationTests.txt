@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.productService.ProductServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.689 s - in com.example.productService.ProductServiceApplicationTests

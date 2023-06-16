@@ -1,0 +1,10 @@
+com/example/productService/dto/ProductResponse$ProductResponseBuilder.class
+com/example/productService/service/ProductService.class
+com/example/productService/data/Product$ProductBuilder.class
+com/example/productService/ProductServiceApplication.class
+com/example/productService/dto/ProductRequest$ProductRequestBuilder.class
+com/example/productService/dto/ProductRequest.class
+com/example/productService/dto/ProductResponse.class
+com/example/productService/repository/ProductRepository.class
+com/example/productService/controller/ProductController.class
+com/example/productService/data/Product.class

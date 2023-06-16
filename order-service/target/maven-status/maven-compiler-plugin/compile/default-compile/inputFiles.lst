@@ -1,0 +1,10 @@
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/config/WebClientConfig.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/dto/OrderRequest.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/dto/InventoryResponse.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/dto/OrderLineItemsDto.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/model/OrderLineItems.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/controller/OrderController.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/repository/OrderRepository.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/model/Order.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/OrderServiceApplication.java
+/Users/yakup.senates/Desktop/test/microservices-new/order-service/src/main/java/com/example/orderservice/service/OrderService.java

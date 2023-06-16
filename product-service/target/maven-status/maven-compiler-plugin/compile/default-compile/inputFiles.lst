@@ -1,0 +1,7 @@
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/ProductServiceApplication.java
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/service/ProductService.java
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/repository/ProductRepository.java
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/data/Product.java
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/dto/ProductRequest.java
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/controller/ProductController.java
+/Users/yakup.senates/Desktop/test/microservices-new/product-service/src/main/java/com/example/productService/dto/ProductResponse.java
