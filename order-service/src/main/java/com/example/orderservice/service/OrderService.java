@@ -23,7 +23,7 @@ public class OrderService {
     private final OrderRepository repository;
     private final WebClient.Builder webClientBuilder;
 
-    public void placeOrder(OrderRequest request) {
+    public String placeOrder(OrderRequest request) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
 
@@ -41,6 +41,9 @@ public class OrderService {
                 .retrieve()
                 .bodyToMono(InventoryResponse[].class)
                 .block();
+        if (response == null ){
+            return "::placeOrder Error while getting inventory";
+        }
         boolean allProductsInStock = Arrays.stream(response).allMatch(InventoryResponse::isInStock);
 
         if (!allProductsInStock)
@@ -48,7 +51,7 @@ public class OrderService {
 
         order.setOrderNumber(UUID.randomUUID().toString());
         Order save = repository.save(order);
-        System.out.println("Saved order " + save.getOrderLineItemsList().get(0));
+        return "Order placed successfully and the order number is " + save.getOrderNumber() + " and the total amount is " + save.getOrderLineItemsList().get(0).getPrice();
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto i) {
