@@ -3,12 +3,14 @@ package com.example.orderservice.service;
 import com.example.orderservice.dto.InventoryResponse;
 import com.example.orderservice.dto.OrderLineItemsDto;
 import com.example.orderservice.dto.OrderRequest;
+import com.example.orderservice.event.OrderPlaceEvent;
 import com.example.orderservice.model.Order;
 import com.example.orderservice.model.OrderLineItems;
 import com.example.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.sleuth.Span;
 import org.springframework.cloud.sleuth.Tracer;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -25,6 +27,7 @@ public class OrderService {
     private final OrderRepository repository;
     private final WebClient.Builder webClientBuilder;
     private final Tracer tracer;
+    private final KafkaTemplate<String, OrderPlaceEvent> kafkaTemplate;
 
     public String placeOrder(OrderRequest request) {
         Order order = new Order();
@@ -57,6 +60,7 @@ public class OrderService {
 
             order.setOrderNumber(UUID.randomUUID().toString());
             Order save = repository.save(order);
+            kafkaTemplate.send("notificationTopic",new OrderPlaceEvent(order.getOrderNumber()));
             return "Order placed successfully and the order number is " + save.getOrderNumber() + " and the total amount is " + save.getOrderLineItemsList().get(0).getPrice();
 
         } finally {

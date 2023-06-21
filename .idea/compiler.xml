@@ -4,18 +4,20 @@
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/api-gateway/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/notification-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="inventory-service" />
+        <module name="discovery-server" />
         <module name="api-gateway" />
         <module name="product-service" />
         <module name="order-service" />
-        <module name="inventory-service" />
-        <module name="discovery-server" />
         <module name="discovery-service" />
+        <module name="notification-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +33,7 @@
       <module name="discovery-service" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="microservices-new" options="" />
+      <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="product-order" options="-parameters" />
       <module name="product-service" options="-parameters" />
